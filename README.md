@@ -1,0 +1,1 @@
+# IA-como-Herramienta-no-como-Autor-Desarrollo-Guiado-y-Validado-de-un-Script-en-Python
