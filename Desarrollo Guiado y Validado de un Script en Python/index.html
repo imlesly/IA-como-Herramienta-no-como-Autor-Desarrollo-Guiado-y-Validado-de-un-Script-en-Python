@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2c">
+  <title>Bienvenido a Simulador de préstamo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Simulador de préstamo">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M8 29.5h24M11 27V18h6v9M20 27V12h6v15M29 27v-6h2v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m10 15 8-5 6 2 7-6M26 6h5v5" stroke="#75E1C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="31" cy="31" r="2" fill="#75E1C0"/>
+          </svg>
+        </span>
+        <span class="brand-name">Simulador <span class="brand-light">Financiero</span></span>
+      </a>
+      <span class="secure-label"><span class="secure-dot" aria-hidden="true"></span> Herramienta interna</span>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy-block">
+        <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> SIMULACIÓN DE PRÉSTAMO</p>
+        <h1 id="page-title">Bienvenido a<br><span>Simulador de préstamo</span></h1>
+        <p class="intro-copy">Ingresa los datos del préstamo para estimar la cuota mensual junto a tu cliente.</p>
+      </div>
+      <div class="business-art" role="img" aria-label="Ilustración de crecimiento empresarial con edificios y una gráfica ascendente">
+        <span class="art-orbit art-orbit-one" aria-hidden="true"></span>
+        <span class="art-orbit art-orbit-two" aria-hidden="true"></span>
+        <svg class="business-illustration" viewBox="0 0 460 270" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="art-panel" x1="58" y1="24" x2="397" y2="255" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#203A50"/>
+              <stop offset="1" stop-color="#101B2C"/>
+            </linearGradient>
+            <linearGradient id="art-rise" x1="121" y1="192" x2="349" y2="73" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#39BFA7" stop-opacity=".18"/>
+              <stop offset="1" stop-color="#58E0BB" stop-opacity=".72"/>
+            </linearGradient>
+          </defs>
+          <rect x="30" y="23" width="400" height="222" rx="24" fill="url(#art-panel)"/>
+          <circle cx="372" cy="66" r="52" fill="#3DC5A8" fill-opacity=".08"/>
+          <circle cx="372" cy="66" r="34" stroke="#77DDC2" stroke-opacity=".14"/>
+          <path d="M56 185H406M56 151H406M56 117H406" stroke="white" stroke-opacity=".07"/>
+          <path d="M74 203V154H111V203M123 203V126H160V203M172 203V142H209V203" fill="#D5E8ED" fill-opacity=".12" stroke="#C1D5DD" stroke-opacity=".32"/>
+          <path d="M84 164H101M84 174H101M133 138H150M133 149H150M182 153H199M182 164H199" stroke="#8CC9C6" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M224 202V111L258 91L292 112V202" fill="#D5E8ED" fill-opacity=".1" stroke="#C1D5DD" stroke-opacity=".42" stroke-width="1.5"/>
+          <path d="M237 128H248M268 128H279M237 145H248M268 145H279M247 202V176H269V202" stroke="#8CC9C6" stroke-opacity=".65" stroke-width="3" stroke-linecap="round"/>
+          <path d="M91 191L144 164L192 173L241 129L281 143L348 84" stroke="#62DDBB" stroke-opacity=".16" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M91 191L144 164L192 173L241 129L281 143L348 84" stroke="url(#art-rise)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M333 84H348V99" stroke="#68E0BD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="144" cy="164" r="4" fill="#A2F0D8"/>
+          <circle cx="241" cy="129" r="4" fill="#A2F0D8"/>
+          <circle cx="348" cy="84" r="5" fill="#A2F0D8"/>
+          <rect x="281" y="34" width="104" height="38" rx="11" fill="#F8FFFD" fill-opacity=".96"/>
+          <circle cx="298" cy="53" r="8" fill="#DFF7F0"/>
+          <path d="M295 53L297 55L301 50" stroke="#209A81" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M312 49H364M312 56H349" stroke="#536779" stroke-opacity=".72" stroke-width="3" stroke-linecap="round"/>
+          <rect x="61" y="213" width="111" height="21" rx="10.5" fill="#122638" stroke="white" stroke-opacity=".12"/>
+          <circle cx="75" cy="223.5" r="3" fill="#62DDBB"/>
+          <path d="M84 223.5H150" stroke="#B6C7D2" stroke-opacity=".7" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="art-caption"><span class="caption-dot" aria-hidden="true"></span> Crecimiento con claridad</span>
+      </div>
+    </section>
+
+    <div class="simulator-layout">
+      <section class="form-card" aria-labelledby="form-title">
+        <div class="card-heading">
+          <div>
+            <p class="section-kicker">DATOS DEL PRÉSTAMO</p>
+            <h2 id="form-title">Configura la simulación</h2>
+          </div>
+          <span class="step-badge" aria-hidden="true">01</span>
+        </div>
+
+        <form id="loan-form" novalidate>
+          <div class="field">
+            <label for="amount">Monto del préstamo</label>
+            <div class="input-with-prefix">
+              <span class="input-prefix" id="amount-currency-symbol" aria-hidden="true">$</span>
+              <input id="amount" name="amount" type="number" min="0" step="any" inputmode="decimal" placeholder="0.00" required aria-describedby="amount-error">
+            </div>
+            <p class="field-error" id="amount-error"></p>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="rate">Tasa anual</label>
+              <div class="input-with-suffix">
+                <input id="rate" name="rate" type="number" min="0" step="any" inputmode="decimal" placeholder="0.00" required aria-describedby="rate-error">
+                <span class="input-suffix" aria-hidden="true">%</span>
+              </div>
+              <p class="field-error" id="rate-error"></p>
+            </div>
+            <div class="field">
+              <label for="currency">Moneda</label>
+              <select id="currency" name="currency" required aria-describedby="currency-error">
+                <option value="MXN">MXN · Peso mexicano</option>
+                <option value="USD">USD · Dólar estadounidense</option>
+                <option value="EUR">EUR · Euro</option>
+              </select>
+              <p class="field-error" id="currency-error"></p>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="start-month">Mes de inicio</label>
+              <input id="start-month" name="startMonth" type="month" required aria-describedby="start-month-error">
+              <p class="field-error" id="start-month-error"></p>
+            </div>
+            <div class="field">
+              <label for="end-month">Mes de última cuota</label>
+              <input id="end-month" name="endMonth" type="month" required aria-describedby="end-month-error">
+              <p class="field-error" id="end-month-error"></p>
+            </div>
+          </div>
+
+          <p class="form-error" id="form-error" role="alert" aria-live="polite"></p>
+          <button class="submit-button" type="submit">
+            <span>Calcular simulación</span>
+            <span class="button-arrow" aria-hidden="true">→</span>
+          </button>
+          <p class="form-note"><span aria-hidden="true">i</span> Estimación referencial; no constituye una oferta de crédito.</p>
+        </form>
+      </section>
+
+      <aside class="results-card" aria-labelledby="results-title">
+        <div class="results-topline">
+          <span class="results-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 19V5m0 14h16M8 15l3-4 3 2 5-7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="results-label">RESUMEN ESTIMADO</span>
+        </div>
+        <h2 id="results-title">Tu simulación</h2>
+        <p class="results-description" id="results-description">Completa los datos para ver el detalle estimado de pagos.</p>
+
+        <div class="payment-highlight" aria-live="polite" aria-atomic="true">
+          <p class="payment-label">Cuota mensual estimada</p>
+          <p class="payment-amount"><span id="monthly-payment">—</span> <span class="payment-currency" id="payment-currency"></span></p>
+          <p class="payment-term" id="payment-term">El resultado aparecerá aquí</p>
+        </div>
+
+        <dl class="summary-list">
+          <div class="summary-row">
+            <dt>Total de intereses</dt>
+            <dd id="total-interest">—</dd>
+          </div>
+          <div class="summary-row">
+            <dt>Total pagado</dt>
+            <dd id="total-paid">—</dd>
+          </div>
+        </dl>
+
+        <div class="results-footer">
+          <span class="footer-check" aria-hidden="true">✓</span>
+          <p>Cálculo con interés simple prorrateado durante el plazo seleccionado.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="page-footer">
+      <span>Simulador interno para asesores</span>
+      <span>Los montos son estimados y pueden variar.</span>
+    </footer>
+  </main>
+</body>
+</html>
